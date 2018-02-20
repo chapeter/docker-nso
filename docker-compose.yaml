@@ -7,4 +7,6 @@ services:
       - ./nso:/tmp/nso
       - ./ncs-run:/opt/ncs-run
       - ./neds:/tmp/neds
+    ports:
+      - 2024:2024
     command: "./run.sh"

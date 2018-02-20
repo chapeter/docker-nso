@@ -8,3 +8,6 @@ RUN pip install ansible
 
 COPY . /tmp
 WORKDIR /tmp
+RUN mkdir build
+
+EXPOSE 2024

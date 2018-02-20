@@ -1,4 +1,10 @@
 # Byte-compiled / optimized / DLL files
+nso/*
+!nso/.ignore
+neds/*
+!neds/.ignore
+ncs-run/*
+!ncs-run/.ignore
 
 __pycache__/
 *.py[cod]
