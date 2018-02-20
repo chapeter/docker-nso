@@ -1,5 +1,4 @@
 # Byte-compiled / optimized / DLL files
-*.signed.bin
 
 __pycache__/
 *.py[cod]

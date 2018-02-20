@@ -4,6 +4,7 @@ services:
     image: chapeter/docker-nso
     build: .
     volumes:
+      - ./nso:/tmp/nso
       - ./ncs-run:/opt/ncs-run
       - ./neds:/tmp/neds
     command: "./run.sh"

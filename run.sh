@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /tmp/nso
 NSO_SIGNED_BIN=$(ls nso*signed.bin)
 #TODO need to dynamically find this version number
 #NSO_VERSION=4.5.3
