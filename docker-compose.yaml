@@ -9,4 +9,6 @@ services:
       - ./neds:/tmp/neds
     ports:
       - 2024:2024
+      - 8080:8080
+      - 2022:2022
     command: "./run.sh"

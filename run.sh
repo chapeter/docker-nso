@@ -7,23 +7,25 @@ NSO_SIGNED_BIN=$(ls nso*signed.bin)
 #NSO_DIR=/opt/ncs-$NSO_VERSION
 NSO_DIR=/opt/ncs
 NCS_INSTALL_DIR=/opt/ncs-run
+
+if [ ! -d $NSO_DIR ]; then
+  echo "NSO not unpacked"
+  echo "Unpacking NSO from $NSO_SIGNED_BIN"
+  bash $NSO_SIGNED_BIN
+
+  NSO_BIN=$(ls nso*installer.bin)
+  echo "Installing NSO from $NSO_BIN"
+  #bash $NSO_BIN /opt/ncs-$NSO_VERSION --local-install
+  bash $NSO_BIN /opt/ncs --local-install
+else
+  echo "NSO already unpacked"
+fi
 source $NSO_DIR/ncsrc
 
 #Check to see if NCS is installed.  If not install it
 if [ ! -f /opt/ncs-run/ncs.conf ]; then
   echo "NSO not installed"
-  if [ ! -d $NSO_DIR ]; then
-    echo "NSO not unpacked"
-    echo "Unpacking NSO from $NSO_SIGNED_BIN"
-    bash $NSO_SIGNED_BIN
 
-    NSO_BIN=$(ls nso*installer.bin)
-    echo "Installing NSO from $NSO_BIN"
-    #bash $NSO_BIN /opt/ncs-$NSO_VERSION --local-install
-    bash $NSO_BIN /opt/ncs --local-install
-  else
-    echo "NSO already unpacked"
-  fi
   source $NSO_DIR/ncsrc
   ncs-setup --dest $NCS_INSTALL_DIR
 else

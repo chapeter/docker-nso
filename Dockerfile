@@ -11,3 +11,7 @@ WORKDIR /tmp
 RUN mkdir build
 
 EXPOSE 2024
+EXPOSE 2022
+EXPOSE 8080
+
+CMD run.sh
