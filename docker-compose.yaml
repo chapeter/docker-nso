@@ -1,0 +1,9 @@
+version: '2'
+services:
+  nso:
+    image: chapeter/docker-nso
+    build: .
+    volumes:
+      - ./ncs-run:/opt/ncs-run
+      - ./neds:/tmp/neds
+    command: "./run.sh"

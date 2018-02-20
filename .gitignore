@@ -1,4 +1,9 @@
 # Byte-compiled / optimized / DLL files
+neds/
+build/
+ncs-run/
+*.signed.bin
+
 __pycache__/
 *.py[cod]
 *$py.class
