@@ -3,5 +3,5 @@
 # To use
 * Fork repo
 * Copy NSO signed bin to nso folder
-* Copy NEDs to neds folder
+* Copy NEDs signed bins to neds folder
 * docker-compose up
